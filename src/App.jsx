@@ -505,7 +505,7 @@ function App() {
 
                 <span>PHONE</span>
 
-                <p>+91 95001 03336</p>
+                <p>+91 73393 97641</p>
 
                 <a
                   href="tel:+919500103336"
@@ -558,7 +558,7 @@ function App() {
             {order.length === 0 ? <div className="panel-empty">🛒<h3>Your order is empty</h3><p>Add delicious dishes from the menu.</p></div> : <>
               <div className="order-list">{order.map((item) => <div className="order-item" key={item.name}><img src={item.image} alt={item.name}/><div className="order-item-info"><strong>{item.name}</strong><span>₹{item.price}</span><div className="qty"><button onClick={() => changeQuantity(item.name,-1)}>−</button><b>{item.quantity}</b><button onClick={() => changeQuantity(item.name,1)}>+</button><button className="remove-item" onClick={() => removeFromOrder(item.name)}>Remove</button></div></div></div>)}</div>
               <div className="order-total"><span>Total</span><strong>₹{orderTotal}</strong></div>
-              <a className="checkout-btn" href={`https://wa.me/919500103336?text=${encodeURIComponent(`Hello The Green Cafe, I would like to place an order:\n\n${order.map((item) => `${item.name} x ${item.quantity} - ₹${Number(item.price)*item.quantity}`).join("\n")}\n\nTotal: ₹${orderTotal}`)}`} target="_blank" rel="noopener noreferrer">Order on WhatsApp →</a>
+              <a className="checkout-btn" href={`https://wa.me/7339397641?text=${encodeURIComponent(`Hello The Green Cafe, I would like to place an order:\n\n${order.map((item) => `${item.name} x ${item.quantity} - ₹${Number(item.price)*item.quantity}`).join("\n")}\n\nTotal: ₹${orderTotal}`)}`} target="_blank" rel="noopener noreferrer">Order on WhatsApp →</a>
             </>}
           </aside>
         </div>
